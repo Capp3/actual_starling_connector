@@ -1,0 +1,25 @@
+[project]
+name = "actual_starling_connector"
+version = "0.0.1"
+description = "Actual Starling Connector"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests",
+    "pydantic"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+main = "actual_starling_connector:main"
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "mypy",
+    "pytest",
+    "black"
+]
