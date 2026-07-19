@@ -69,7 +69,7 @@ tramp
 # =============================================================================
 
 # Cursor AI
-# .cursor/
+.cursor/
 
 # Windsurf AI
 .windsurf/
@@ -184,7 +184,6 @@ pnpm-lock.yaml
 
 # Docker
 docker-compose.override.yml
-.dockerignore
 
 # =============================================================================
 # LOGS & TEMPORARY FILES
@@ -235,8 +234,7 @@ __pycache__/
 # C extensions
 *.so
 
-# Package management
-uv.lock
+# Package management (uv.lock is committed for reproducible Docker/CI installs)
 #Pipfile.lock
 #poetry.lock
 #poetry.toml
@@ -285,6 +283,7 @@ htmlcov/
 .coverage.*
 nosetests.xml
 coverage.xml
+coverage.json
 *.cover
 *.py.cover
 .hypothesis/
@@ -342,3 +341,6 @@ __marimo__/
 # -----------------------------------------------------------------------------
 
 data/
+optimization-journey/
+memory-bank/
+logs/

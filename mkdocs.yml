@@ -1,0 +1,23 @@
+site_name: actual-starling-sync
+site_description: Sync Starling Bank transactions into self-hosted Actual Budget
+site_url: https://capp3.github.io/actual_starling_connector/
+repo_url: https://github.com/Capp3/actual_starling_connector
+repo_name: Capp3/actual_starling_connector
+edit_uri: edit/main/docs/
+
+theme:
+  name: readthedocs
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Configuration: configuration.md
+  - Operations: operations.md
+  - Acceptance: acceptance.md
+  - Development: development.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - tables

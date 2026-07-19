@@ -1,0 +1,22 @@
+# Actual Starling sync worker (one instance can sync individual and/or joint).
+# Copy env.example -> .env and fill at least one channel pair before `up -d`.
+#
+# Optional Docker secrets (Settings already supports *_FILE):
+#   secrets:
+#     starling_individual_access_token:
+#       file: ./secrets/starling_individual_access_token
+#   environment:
+#     STARLING_INDIVIDUAL_ACCESS_TOKEN_FILE: /run/secrets/starling_individual_access_token
+
+services:
+  sync:
+    build: .
+    container_name: actual-starling-sync
+    env_file: .env
+    environment:
+      DATABASE_PATH: /data/sync.db
+      ACTUAL_DATA_DIR: /data/actual
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    stop_grace_period: 60s
