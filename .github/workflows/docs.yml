@@ -24,10 +24,12 @@ jobs:
           python-version: "3.12"
 
       - name: Install MkDocs
-        run: uv pip install --system mkdocs
+        run: |
+          uv venv .venv-docs
+          uv pip install --python .venv-docs/bin/python mkdocs
 
       - name: Build site
-        run: mkdocs build --strict
+        run: .venv-docs/bin/mkdocs build --strict
 
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -45,6 +47,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

@@ -23,7 +23,7 @@ just docs-build       # uvx mkdocs build --strict
 
 - Config: `mkdocs.yml` at the repo root  
 - Pages: `docs/*.md`  
-- CI: `.github/workflows/docs.yml` installs **uv**, then `uv pip install --system mkdocs` (no `requirements.txt`), builds with `--strict`, and deploys to **GitHub Pages** on pushes to `main`
+- CI: `.github/workflows/docs.yml` installs **uv**, creates a venv, `uv pip install mkdocs` (no `requirements.txt`), builds with `--strict`, and deploys to **GitHub Pages** on pushes to `main`
 
 ### Enable GitHub Pages (one-time)
 
