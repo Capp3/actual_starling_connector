@@ -38,6 +38,8 @@ Published URL: [https://capp3.github.io/actual_starling_connector/](https://capp
 | `ci.yml` | `lint-ci` + `cov` (app tests) |
 | `docs.yml` | MkDocs build; deploy Pages on `main` |
 
+Dependabot (`.github/dependabot.yml`) opens weekly PRs for **uv**, **GitHub Actions**, and **Docker** base image updates.
+
 ## External references
 
 - Starling API: https://developer.starlingbank.com/docs  
